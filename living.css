@@ -7,7 +7,7 @@
 	font-size: 64px;
 	padding: 150px;
 }
-#redirect {
+.btn btn-primary {
 	background-color: #4CAF50;
 	border: none;
 	color: white;
@@ -21,4 +21,8 @@ body {
 	background-image: url("https://atmedia.imgix.net/06acdf7af156ff184206b87e18d64f619f5481c0?w=800&fit=max");
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+#hidemessage {
+	visibility: hidden;
 }

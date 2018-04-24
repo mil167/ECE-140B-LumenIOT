@@ -3,9 +3,61 @@
 <head>
 	<title>LumenIOT Homepage</title>
 	<link rel="stylesheet" type="text/css" href="living.css">
+	 <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+	<script>
+	$(document).ready(function() {
+		$("#send_form").submit(function() {
+			alert("Thank you for your interest! A confirmation email should arrive in your inbox shortly.");
+		});
+	});
+	</script>
+</head>
 <body>
 	<p id="banner">Bringing You Easier, Better, Brighter Living</h1>
 	<br>
+	<!--
 	<button type="button" id="redirect">Click here to learn more!</button>
+	-->
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+	  Click here to learn more!
+	</button>
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLongTitle"><strong>Join our email subscription list!</strong></h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			<form id="send_form" method="POST" action="https://formspree.io/whendidimakethis1@gmail.com">
+			  <input name="text" placeholder="First name"><br>
+			  <input name="text" placeholder="Last name"><br>
+			  <input name="email" placeholder="Your email" type="email">
+			  <div id="hidemessage">
+				Thank you for signing up for our email newsletter! LumenIOT appreciates your support and interest in our product.
+			  </div>
+			  <button type="submit">Send</button>
+			</form>
+			
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+		  </div>
+		</div>
+	  </div>
+	</div>
 </body>
 </html>
